@@ -1,0 +1,35 @@
+// Text styles
+@use 'typography';
+@use "functions";
+@use "variables";
+
+.text-h1-style {
+  font-family: variables.$font-poppins;
+  font-style: normal;
+  font-weight: 800;
+  @include typography.font-style(h1);
+  text-transform: uppercase;
+  margin: unset;
+}
+
+.text-subtitle-style {
+  font-family: variables.$font-poppins;
+  font-style: normal;
+  font-weight: 500;
+  @include typography.font-style(subtitle);
+  letter-spacing: functions.px-to-rem(6.38);
+}
+
+.text-description-style {
+  font-family: variables.$font-montserrat;
+  font-style: normal;
+  font-weight: 500;
+  @include typography.font-style(description);
+}
+
+.text-links-style {
+  font-family: variables.$font-montserrat;
+  font-style: normal;
+  font-weight: 500;
+  @include typography.font-style(links);
+}

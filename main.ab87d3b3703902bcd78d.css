@@ -1,0 +1,574 @@
+/*!**************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./styles/index.scss ***!
+  \**************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@500;800&display=swap);
+/*!******************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./styles/index.scss (1) ***!
+  \******************************************************************************************************************/
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
+* .icon {
+    font-size: 0;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -ms-overflow-style: scrollbar;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+    display: block;
+}
+
+body {
+    margin: 0;
+    text-align: left;
+    flex: 1;
+}
+
+[tabindex="-1"]:focus {
+    outline: 0 !important;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+abbr[title],
+abbr[data-original-title] {
+    text-decoration: underline dotted;
+    cursor: help;
+    border-bottom: 0;
+}
+
+address {
+    margin-bottom: 1rem;
+    font-style: normal;
+    line-height: inherit;
+}
+
+ol,
+ul,
+dl {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+    margin-bottom: 0;
+}
+
+dt {
+    font-weight: 700;
+}
+
+dd {
+    margin-bottom: 0.5rem;
+    margin-left: 0;
+}
+
+blockquote {
+    margin: 0 0 1rem;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    position: relative;
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:not([href]):not([tabindex]) {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):hover,
+a:not([href]):not([tabindex]):focus {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus {
+    outline: 0;
+}
+
+pre,
+code,
+kbd,
+samp {
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 1em;
+}
+
+pre {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    overflow: auto;
+}
+
+figure {
+    margin: 0 0 1rem;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+svg {
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+caption {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    color: #6c757d;
+    text-align: left;
+    caption-side: bottom;
+}
+
+th {
+    text-align: inherit;
+}
+
+label {
+    display: inline-block;
+}
+
+button {
+    border-radius: 0;
+    outline: none;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+select {
+    word-wrap: normal;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+    -webkit-appearance: button;
+}
+
+button:not(:disabled),
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled) {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+    padding: 0;
+    border-style: none;
+}
+
+input[type=radio],
+input[type=checkbox] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+input[type=date],
+input[type=time],
+input[type=datetime-local],
+input[type=month] {
+    -webkit-appearance: listbox;
+}
+
+textarea {
+    overflow: auto;
+    resize: vertical;
+}
+
+fieldset {
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+legend {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    line-height: inherit;
+    color: inherit;
+    white-space: normal;
+}
+
+progress {
+    vertical-align: baseline;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type=search] {
+    outline-offset: -2px;
+    -webkit-appearance: none;
+}
+
+[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+    font: inherit;
+    -webkit-appearance: button;
+}
+
+output {
+    display: inline-block;
+}
+
+summary {
+    display: list-item;
+    cursor: pointer;
+}
+
+template {
+    display: none;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0;
+    color: #000000;
+}
+body .background-color-light {
+    background-color: #F6D8C6;
+}
+body .main {
+    height: 100%;
+}
+body .container {
+    max-width: 100%;
+    margin: 0 auto;
+    height: 100%;
+}
+@media (min-width: 1600px) {
+    body .container {
+        max-width: 90%;
+    }
+}
+@media (min-width: 2560px) {
+    body .container {
+        max-width: 80%;
+    }
+}
+
+.text-h1-style, .landing-page .info .header {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 3.5rem;
+    line-height: 6.625rem;
+    text-transform: uppercase;
+    margin: unset;
+}
+
+.text-subtitle-style, .landing-page .info .sub-title {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.875rem;
+    line-height: 2.375rem;
+    letter-spacing: 0.39875rem;
+}
+
+.text-description-style, .landing-page .info .description {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 2.25rem;
+}
+
+.text-links-style, .landing-page .social a {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.029225rem;
+    line-height: 2.25rem;
+}
+
+.text-primary-color, .landing-page .info .header, .landing-page .info .sub-title {
+    color: #B88E2F;
+}
+
+.text-dark-color, .landing-page .info .description {
+    color: #000000;
+}
+
+.text-muted-color, .landing-page .social a {
+    color: #111111;
+}
+
+.landing-page {
+    position: relative;
+    display: grid;
+    grid-template-areas: "info" "image" "social";
+    grid-template-columns: 1fr;
+    align-items: start;
+    text-align: center;
+    height: 100%;
+}
+@media (min-width: 1600px) {
+    .landing-page {
+        grid-template-areas: "info image" "social image";
+        grid-template-columns: min-content;
+        grid-template-rows: auto 1fr;
+        padding: 0;
+        text-align: left;
+        overflow: hidden;
+        height: 100vh;
+    }
+}
+.landing-page .info {
+    padding: 0 1.5rem;
+    grid-area: info;
+    margin-top: 3.125rem;
+}
+@media (min-width: 1600px) {
+    .landing-page .info {
+        margin-top: 12.5rem;
+        padding: 0;
+        min-width: 33.125rem;
+    }
+}
+.landing-page .info .header {
+    font-size: 3.5rem;
+    line-height: 6.625rem;
+}
+@media (min-width: 768px) {
+    .landing-page .info .header {
+        font-size: 6rem;
+        line-height: 9rem;
+    }
+}
+.landing-page .info .sub-title {
+    font-size: 1.875rem;
+    line-height: 2.375rem;
+    margin-block: 0 1.25rem;
+}
+@media (min-width: 768px) {
+    .landing-page .info .sub-title {
+        font-size: 2.40151875rem;
+        line-height: 3.625rem;
+        margin-block: 0 2rem;
+    }
+}
+.landing-page .info .description {
+    margin-bottom: 1.875rem;
+}
+@media (min-width: 768px) {
+    .landing-page .info .description {
+        max-width: 43.75rem;
+        margin: 0 auto 1.25rem;
+    }
+}
+@media (min-width: 1600px) {
+    .landing-page .info .description {
+        margin-bottom: 3.3125rem;
+    }
+}
+.landing-page .socials {
+    grid-area: social;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1.25rem 0;
+    padding: 0;
+}
+@media (min-width: 1400px) {
+    .landing-page .socials {
+        margin-top: 2.5rem;
+        gap: 1rem;
+    }
+}
+@media (min-width: 1600px) {
+    .landing-page .socials {
+        margin-top: 0;
+    }
+}
+.landing-page .social {
+    position: relative;
+}
+.landing-page .social a {
+    display: inline-block;
+    position: relative;
+    padding-left: 3.625rem;
+    text-decoration: none;
+}
+.landing-page .social a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.375rem;
+    height: 2.375rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.landing-page .social-behance a::before {
+    background-image: url(./src/assets/icons/behance.svg);
+}
+.landing-page .social-dribbble a::before {
+    background-image: url(./src/assets/icons/dribbble.svg);
+}
+.landing-page .social-website a::before {
+    background-image: url(./src/assets/icons/website.svg);
+}
+.landing-page .image {
+    grid-area: image;
+}
+.landing-page .image picture,
+.landing-page .image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .landing-page .image picture,
+    .landing-page .image img {
+        width: 80%;
+    }
+}
+@media (min-width: 1600px) {
+    .landing-page .image picture,
+    .landing-page .image img {
+        width: 100%;
+    }
+}
+
+/*# sourceMappingURL=main.ab87d3b3703902bcd78d.css.map*/

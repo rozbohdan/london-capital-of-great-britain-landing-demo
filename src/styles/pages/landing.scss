@@ -1,0 +1,151 @@
+@use "../abstracts/variables";
+@use "../abstracts/breakpoints";
+@use "../abstracts/functions";
+@use "../abstracts/typography";
+@use "../abstracts/text-styles";
+@use "../abstracts/text-colors.scss";
+
+.landing-page {
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    "info"
+    "image"
+    "social";
+  grid-template-columns: 1fr;
+  align-items: start;
+  text-align: center;
+  height: 100%;
+
+  @include breakpoints.media-extra {
+    grid-template-areas:
+      "info image"
+      "social image";
+    grid-template-columns: min-content;
+    grid-template-rows: auto 1fr;
+    padding: 0;
+    text-align: left;
+    overflow: hidden;
+    height: 100vh;
+  }
+
+  .info {
+    padding: 0 functions.px-to-rem(24);
+    grid-area: info;
+    margin-top: functions.px-to-rem(50);
+
+    @include breakpoints.media-extra {
+      margin-top: functions.px-to-rem(200);
+      padding: 0;
+      min-width: functions.px-to-rem(530);
+    }
+
+    .header {
+      @extend .text-h1-style;
+      @extend .text-primary-color;
+      @include typography.font-style(h1);
+
+      @include breakpoints.media-md {
+        @include typography.font-style(h1, md);
+      }
+    }
+
+    .sub-title {
+      @extend .text-subtitle-style;
+      @extend .text-primary-color;
+      @include typography.font-style(subtitle);
+      margin-block: 0 functions.px-to-rem(20);
+
+      @include breakpoints.media-md {
+        @include typography.font-style(subtitle, md);
+        margin-block: 0 functions.px-to-rem(32);
+      }
+    }
+
+    .description {
+      @extend .text-description-style;
+      @extend .text-dark-color;
+      margin-bottom: functions.px-to-rem(30);
+
+      @include breakpoints.media-md {
+        max-width: functions.px-to-rem(700);
+        margin: 0 auto functions.px-to-rem(20);
+      }
+
+      @include breakpoints.media-extra {
+        margin-bottom: functions.px-to-rem(53);
+      }
+    }
+  }
+
+  .socials {
+    grid-area: social;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: functions.px-to-rem(8);
+    margin: functions.px-to-rem(20) 0;
+    padding: 0;
+
+    @include breakpoints.media-xxl {
+      margin-top: functions.px-to-rem(40);
+      gap: functions.px-to-rem(16);
+    }
+
+    @include breakpoints.media-extra {
+      margin-top: 0;
+    }
+  }
+
+  .social {
+    position: relative;
+
+    a {
+      display: inline-block;
+      position: relative;
+      padding-left: functions.px-to-rem(58);
+      text-decoration: none;
+
+      @extend .text-links-style;
+      @extend .text-muted-color;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: functions.px-to-rem(38);
+        height: functions.px-to-rem(38);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  @each $name, $icon in variables.$socials {
+    .social-#{$name} a::before {
+      background-image: #{$icon};
+    }
+  }
+
+  .image {
+    grid-area: image;
+
+    picture,
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+
+      @include breakpoints.media-md {
+        width: 80%;
+      }
+
+      @include breakpoints.media-extra {
+        width: 100%;
+      }
+    }
+  }
+}

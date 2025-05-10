@@ -1,0 +1,50 @@
+@use "variables";
+
+// Media query mixins
+@mixin media-xs {
+  @media (max-width: variables.$screen-sm-max) {
+    @content;
+  }
+}
+
+@mixin media-sm {
+  @media (min-width: variables.$screen-sm-min) {
+    @content;
+  }
+}
+
+@mixin media-md {
+  @media (min-width: variables.$screen-md-min) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media (min-width: variables.$screen-lg-min) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @media (min-width: variables.$screen-xl-min) {
+    @content;
+  }
+}
+
+@mixin media-xxl {
+  @media (min-width: variables.$screen-xxl-min) {
+    @content;
+  }
+}
+
+@mixin media-extra {
+  @media (min-width: variables.$screen-extra) {
+    @content;
+  }
+}
+
+@mixin media-super-extra {
+  @media (min-width: variables.$screen-super-extra) {
+    @content;
+  }
+}

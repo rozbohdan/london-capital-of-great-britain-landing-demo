@@ -1,0 +1,14 @@
+@use "sass:map";
+@use "variables";
+
+// Mixin for text colors
+@mixin text-color($color-name) {
+  color: map.get(variables.$text-colors, $color-name);
+}
+
+// Generate text color classes using a loop
+@each $name, $color in variables.$text-colors {
+  .text-#{$name}-color {
+    @include text-color($name);
+  }
+}

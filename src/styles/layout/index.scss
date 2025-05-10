@@ -1,0 +1,37 @@
+@use "sass:map";
+@use "../abstracts/variables";
+@use "../abstracts/functions";
+@use "../abstracts/breakpoints";
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: variables.$font-montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+  color: map.get(variables.$text-colors, dark);
+
+  .background-color-light {
+    background-color: variables.$background-color-light;
+  }
+
+  .main {
+    height: 100%;
+  }
+
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    height: 100%;
+
+    @include breakpoints.media-extra {
+      max-width: 90%;
+    }
+
+    @include breakpoints.media-super-extra {
+      max-width: 80%;
+    }
+  }
+}

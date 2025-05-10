@@ -1,0 +1,31 @@
+@use "sass:map";
+@use 'variables';
+@use 'functions';
+@use 'breakpoints';
+
+$font-sizes-base: (
+  h1: (size: 56, line-height: 106),
+  subtitle: (size: 30, line-height: 38),
+  description: (size: 18, line-height: 36),
+  links: (size: 16.4676, line-height: 36)
+);
+
+$font-sizes-md: (
+  h1: (size: 96, line-height: 144),
+  subtitle: (size: 38.4243, line-height: 58)
+);
+
+@function get-font($type, $breakpoint: base) {
+  @if $breakpoint == md and map.has-key($font-sizes-md, $type) {
+    @return map.get($font-sizes-md, $type);
+  }
+
+  @return map.get($font-sizes-base, $type);
+}
+
+@mixin font-style($type, $breakpoint: base) {
+  $font: get-font($type, $breakpoint);
+  font-size: functions.px-to-rem(map.get($font, size));
+  line-height: functions.px-to-rem(map.get($font, line-height));
+}
+

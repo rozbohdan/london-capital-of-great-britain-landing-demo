@@ -1,0 +1,49 @@
+//Main fonts
+
+@use "sass:map";
+@use "fonts";
+
+$font-poppins: 'Poppins', sans-serif;
+$font-montserrat: 'Montserrat', sans-serif;
+
+// Breakpoints values
+$screen-xs:      0;
+$screen-tin:     450px;
+$screen-sm-min:  576px;
+$screen-sm-max:  ($screen-sm-min - 1px);
+$screen-md-min:  768px;
+$screen-md-max:  ($screen-md-min - 1px);
+$screen-lg-min:  992px;
+$screen-lg-max:  ($screen-lg-min - 1px);
+$screen-xl-min:  1200px;
+$screen-xl-max:  ($screen-xl-min - 1px);
+$screen-xxl-min: 1400px;
+$screen-xxl-max: ($screen-xxl-min - 1px);
+$screen-extra:   1600px;
+$screen-super-extra: 2560px;
+
+// Base colors
+$colors: (
+  light: #F6D8C6,
+  primary: #B88E2F,
+  black-true: #000000,
+  black-soft: #111111
+);
+
+// Text colors
+$text-colors: (
+  primary: map.get($colors, primary),
+  dark: map.get($colors, black-true),
+  muted: map.get($colors, black-soft)
+);
+
+// Background colors
+$background-color-light: map.get($colors, light);
+
+// Social
+$socials: (
+  behance: "url('/assets/icons/behance.svg')",
+  dribbble: "url('/assets/icons/dribbble.svg')",
+  website: "url('/assets/icons/website.svg')"
+);
+
